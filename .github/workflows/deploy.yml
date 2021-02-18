@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
+      
 
     - name: echo version
       run: echo ${GITHUB_REF:10}
