@@ -6,12 +6,10 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    container: node:10.16-jessie
     steps:
     - name: Checkout
       uses: actions/checkout@master
-
-    - name: Install dependencies
-      run: npm ci
 
     - name: echo version
       run: echo ${GITHUB_REF:10}
